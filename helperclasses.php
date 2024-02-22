@@ -31,7 +31,13 @@ class file_mani
                         $file_new_name=$NewFileName.".".$file_ex; 
                     }
                     $file_destination=$FileDestinationPath. $file_new_name;
-                    move_uploaded_file($file_tmp_name,$file_destination);
+                    if(move_uploaded_file($file_tmp_name,$file_destination))
+                    {
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
                 }
                 else
                 {
@@ -51,17 +57,19 @@ class file_mani
 
     }   
 
-    function insertIntoDb($id,$name,$email,$number,$institute,$timestamp,$con)
+    function insertIntoDb($id,$name,$email,$number,$institute,$dept,$timestamp,$con)
     {
-        $sql="INSERT INTO records (`id`, `name`, `email`, `contectNumber`, `institute`,`timeStamp`) VALUES ('$id','$name','$email','$number','$institute','$timestamp')";
+        $sql="INSERT INTO records (`id`, `name`, `email`, `contectNumber`, `institute`,`dept`,`timeStamp`) VALUES ('$id','$name','$email','$number','$institute','$dept','$timestamp')";
         if($con->query($sql))
         {
-            echo "<script>alert('Your responce is reported successfull')</script>";
+            // echo "<script>alert('Your responce is reported successfull')</script>";
+            return true;
             // echo "done";
         }
         else
         {
-            echo "<script>alert('There is an error while uploding your file.')</script>";
+            // echo "<script>alert('There is an error while uploding your file.')</script>";
+            return false;
             // echo "not done";
         }
     }
