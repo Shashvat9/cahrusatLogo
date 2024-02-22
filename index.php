@@ -1,76 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0">
-	<title>CHARUSAT</title>
-	<link rel="stylesheet"	href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARUSAT</title>
+    <!-- <link rel="stylesheet"	href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-<header>
-    <a href="#"><img src="img.png" alt="Site Name" class="logo"/></a>
-    <h1 class="title">Campus Anti-Drug Logo Compition</h1>
-	<h2 class="title1">By: Anti-Drug and Alcohol Cell</h2>
-	<h2> </h2>
-	<h2 class="title1">Participants Details</h2>
-</header>
-		<!-- Form section that contains the
-			login and the signup form -->
-		<div class="form-section">
-			<!-- signup form -->
-            <form action="" method="post" enctype="multipart/form-data">
-                    <div class="signup-box">
-
-                        <lable for="name" >NAME:
-                        <input type="text" class="name ele" name="name" placeholder="Enter your name" required></lable>
-                           <lable for="name">ID: <input type="text"
-                            class="name ele" name="id"
-                            placeholder="Enter your ID" required></lable>
-                        <lable for="name" >EMAIL:
-                        <input type="email" name="email"
-                            class="email ele" 
-                            placeholder="yourid@charusat.edu.in"required></lable>
-                            <lable for="name" >MOBILE NO.:
-                        <input type="integer" name="number"
-                            class="password ele"
-                            placeholder="Number"  maxlength="10" onKeyPress="if(this.value.length==10) return false" required></lable>
-                            <lable for="name" >INSTITUE :
-                            <select name="institute" class="email ele"required> 
-                                <option value="DEPSTAR">DEPSTAR</option> 
-                                <option value="CSPIT">CSPIT</option> 
-                                <option value="PDPIAS">PDPIAS</option> 
-                                <option value="RPCP">RPCP</option> 
-                                <option value="CMPICA">CMPICA</option>
-                                <option value="AIRP">AIRP</option>  
-                                <option value="CIPS">CIPS</option> 
-                                <option value="MTIN">MTIN</option> 
-                                <option value="IIIM">IIIM</option> 
-                            </select></lable>
-                            <lable for="name" >DEPARTMENT:
-                        <input type ="text" name="dept" class = "name ele" placeholder="DEPARTMENT" required></lable>
-                        <input type="file" id="myFile" name="logo"required>
-                        <p class="mad"> ONLY JPG,PNG,SVG FORMATES ACCEPTED</p>
-                        <input type="submit" value="SUBMIT" class="clkbtn" name="submit">
-                        
-			        </div>
-            </form>
-				
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <a href="#"><img src="img.png" alt="Site Name" class="logo" /></a>
+                <h1 class="title mt-3">Campus Anti-Drug Logo Compition</h1>
+                <h2 class="title1">By: Anti-Drug and Alcohol Cell</h2>
+                <h2> </h2>
+                <h2 class="title1">Participants Details</h2>
+            </div>
+        </div>
+        <!-- Form section that contains the
+                    login and the signup form -->
+        <div class="form-section container ">
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="col-lg-5 border border-solid border-primary p-5" style="border-radius: 15px;">
+                    <!-- signup form -->
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="signup-box">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">NAME:</label>
+                                    <input class="form-control" type="text" class="name ele" name="name"
+                                        placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">ID:</label> <input class="form-control" type="text"
+                                        class="name ele" name="id" placeholder="Enter your ID" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">EMAIL:</label>
+                                    <input class="form-control" type="email" name="email" class="email ele"
+                                        placeholder="yourid@charusat.edu.in" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">MOBILE NO.:</label>
+                                    <input class="form-control" type="integer" name="number" class="password ele"
+                                        placeholder="Number" maxlength="10"
+                                        onKeyPress="if(this.value.length==10) return false" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">INSTITUE :</label>
+                                    <select class="form-select" name="institute" class="email ele" required>
+                                        <option value="" selected disabled>-- SELECT INSTITUTE -- </option>
+                                        <option value="DEPSTAR">DEPSTAR</option>
+                                        <option value="CSPIT">CSPIT</option>
+                                        <option value="PDPIAS">PDPIAS</option>
+                                        <option value="RPCP">RPCP</option>
+                                        <option value="CMPICA">CMPICA</option>
+                                        <option value="AIRP">AIRP</option>
+                                        <option value="CIPS">CIPS</option>
+                                        <option value="MTIN">MTIN</option>
+                                        <option value="IIIM">IIIM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">DEPARTMENT:</label>
+                                    <input class="form-control" type="text" name="dept" class="name ele"
+                                        placeholder="DEPARTMENT" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="name">POSTER:</label>
+                                    <input class="form-control" type="file" id="myFile" name="logo" required>
+                                    <p class="text-danger"> ONLY JPG,PNG,SVG FORMATES ACCEPTED</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control btn btn-success" type="submit" value="SUBMIT" class="clkbtn" name="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $("input[required]").parent("label").addClass("required");
     </script>
-	<!-- <script src="sign.js"></script> -->
-    <footer class="site-footer">
-    <p>Copyright &copy; 2022 CHARUSAT</p>
-    <p>Anti-Drug and Alcohol Cell</p>
-    <p>Guided by: JAY PATEL</p>
-    <p>Prepared By: SHASHVAT (D23DCE158) & JAIMEEN (D23DCE152) </p>
-</footer>
+    <!-- <script src="sign.js"></script> -->
+    <footer class="site-footer footer mt-5">
+        
+        <div class="text-center pt-4 px-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>Anti-Drug and Alcohol Cell</p>
+            <p>Guided by: JAY PATEL</p>
+            <p>Prepared By: SHASHVAT (D23DCE158) & JAIMEEN (D23DCE152) </p>
+            </div>
+            <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.298);">
+                <strong>© <span id="year"></span></strong> Copyright: CHARUSAT
+            </div>
+    
+        
+    </footer>
+    </div>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
 </body>
+
 </html>
 
 
@@ -109,7 +161,7 @@
                         if($obfile->insertIntoDb($id,$name,$email,$number,$institute,$dept,$timest,$con)){
                             echo "<script>alert('Your entry is submited successfully.')</script>";
                             setcookie("isSubmited","true",time()+60*60*24*30);
-                            echo "<script>location.href='submited'</script>";
+                            echo "<script>location.href = 'submited'</script>";
                         }
                         else
                         {
