@@ -7,8 +7,6 @@
 		content="width=device-width, initial-scale=1.0">
 	<title>CHARUSAT</title>
 	<link rel="stylesheet"	href="style.css">
-   
-        
 </head>
 
 <body>
@@ -81,8 +79,7 @@
     include './conn.php';
 
     if(isset($_COOKIE['isSubmited'])){
-        // echo "<script>alert('You have already submited your entry.')</script>";
-        header("Location: submited.php");
+        header("Location: submited");
     }
 
     $timest=date("Y-m-d",time());
@@ -112,8 +109,7 @@
                         if($obfile->insertIntoDb($id,$name,$email,$number,$institute,$dept,$timest,$con)){
                             echo "<script>alert('Your entry is submited successfully.')</script>";
                             setcookie("isSubmited","true",time()+60*60*24*30);
-                            // header("Location: submited.php");
-                            echo "<script>location.href='submited.php'</script>";
+                            echo "<script>location.href='submited'</script>";
                         }
                         else
                         {
